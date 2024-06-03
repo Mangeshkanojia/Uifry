@@ -1,116 +1,58 @@
 import React from "react";
-import { Menu, X } from "lucide-react";
 import logo from "../../assets/logo.png";
+import Vector1 from '../../assets/vector1.png'
 
-const menuItems = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "About Us",
-    href: "#",
-  },
-  {
-    name: "Pricing",
-    href: "#",
-  },
-  {
-    name: "Features",
-    href: "#",
-  },
-];
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+  // };
 
   return (
-    <div className="relative w-full bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center space-x-2">
-          <span>
-            <img src={logo} className="mr-3 h-6 sm:h-9" alt="Uifry Logo" />
-          </span>
-          <span className="font-bold text-2xl">Uifry</span>
-        </div>
-        <div className="hidden grow items-start lg:flex">
-          <ul className="ml-12 inline-flex space-x-8">
-            {menuItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="text-sm font-semibold text-gray-800 hover:text-red-500"
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="hidden lg:block">
-          <button className="bg-black text-white px-4 py-2 rounded">
-            Download
-          </button>
-        </div>
-        <div className="lg:hidden">
-          <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
-        </div>
-        {isMenuOpen && (
-          <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden">
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="px-5 pb-6 pt-5">
-                <div className="flex items-center justify-between">
-                  <div className="inline-flex items-center space-x-2">
-                    <span>
-                      <img
-                        src={logo}
-                        className="mr-3 h-6 sm:h-9"
-                        alt="Uifry Logo"
-                      />
-                    </span>
-                    <span className="font-bold text-2xl">Uifry</span>
-                  </div>
-                  <div className="-mr-2">
-                    <button
-                      type="button"
-                      onClick={toggleMenu}
-                      className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                    >
-                      <span className="sr-only">Close menu</span>
-                      <X className="h-6 w-6" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <nav className="grid gap-y-4">
-                    {menuItems.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
-                      >
-                        <span className="ml-3 text-base font-medium text-gray-900">
-                          {item.name}
-                        </span>
-                      </a>
-                    ))}
-                  </nav>
-                </div>
-                <button
-                  type="button"
-                  className="mt-4 w-full rounded bg-black px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                >
-                  Download
-                </button>
-              </div>
+     <div className="absolute top-[calc(50%_-_2903.5px)] left-[calc(50%_-_534px)] w-[1079px] h-[60px] text-xl">
+        <div className="absolute top-[calc(50%_-_17px)] left-[calc(50%_-_539.5px)] w-[531.5px] h-[34.4px]">
+          <div className="absolute top-[calc(50%_-_13.2px)] left-[calc(50%_-_112.25px)] flex flex-row items-center justify-center gap-[24px]">
+            <b className="relative leading-[26px] capitalize text-tomato cursor-pointer">
+              home
+            </b>
+            <div className="relative leading-[26px] capitalize font-medium cursor-pointer hover:text-tomato">
+              about us
+            </div>
+            <div className="relative leading-[26px] capitalize font-medium cursor-pointer hover:text-tomato">
+              pricing
+            </div>
+            <div className="relative leading-[26px] capitalize font-medium cursor-pointer hover:text-tomato">
+              features
             </div>
           </div>
-        )}
-      </div>
-    </div>
+          <div className="absolute top-[calc(50%_-_17.2px)] left-[calc(50%_-_265.75px)] w-[115.8px] h-[34.4px] text-8xs-2 font-plus-jakarta-sans">
+            <div className="absolute top-[calc(50%_-_7.2px)] left-[calc(50%_+_49px)] font-extrabold inline-block w-[8.9px] h-[5px]">
+              TM
+            </div>
+            <div className="absolute top-[calc(50%_-_17.2px)] left-[calc(50%_-_57.9px)] w-[105.1px] h-[34.4px]">
+              <img
+                className="absolute top-[calc(50%_-_12px)] left-[calc(50%_-_12.55px)] w-[65.1px] h-[29.3px]"
+                alt=""
+                src={Vector1}
+              />
+              <img
+                className="absolute top-[calc(50%_-_17.2px)] left-[calc(50%_-_52.55px)] w-[33.7px] h-[34px] overflow-hidden"
+                alt=""
+                src={logo}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[calc(50%_-_30px)] left-[calc(50%_+_361.3px)] w-[178.2px] h-[60px] text-lg text-white">
+          <div className="absolute top-[calc(50%_-_30px)] left-[calc(50%_-_89.1px)] rounded bg-black w-[178.2px] h-[60px]" />
+          <div className="absolute top-[calc(50%_-_14px)] left-[calc(50%_-_43.5px)] w-[87.1px] h-7">
+            <div className="absolute top-[calc(50%_-_14px)] left-[calc(50%_-_43.55px)] leading-[28px] capitalize font-medium inline-block w-[87.1px]">
+              download
+            </div>
+          </div>
+        </div>
+      </div> 
   );
 }
